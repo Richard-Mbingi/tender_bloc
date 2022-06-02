@@ -1,3 +1,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+     font-family: 'Outfit';
+     src: url('../public/fonts/Outfit-Light.ttf') format('ttf');
+   }
+
+@font-face {
+     font-family: 'Quicksand';
+     src: url('../public/fonts/Quicksand-Light.ttf') format('ttf');
+}
+
+@font-face {
+     font-family: 'Inconsolata-Light';
+     src: url('../public/fonts/Inconsolata-Light.ttf') format('ttf');
+}
+
+body {
+     @apply font-sans;
+}
