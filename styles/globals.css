@@ -21,6 +21,10 @@ body {
      @apply font-sans text-secondary font-light;
 }
 
-button {
+input {
+     @apply bg-primary border border-secondary rounded p-2 text-secondary font-light
+}
+
+.button {
      @apply font-sans rounded-sm text-secondary font-light  p-2 bg-gradient-to-r from-gdYellow via-gdRed to-gdIndigo;
 }
