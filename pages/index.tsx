@@ -32,16 +32,16 @@ export default function Home() {
     </div>
     {/* Section One */}
     <div className=''>
-      <h1>Consetetur sadipscing
+      <h1 className="font-mono text-5xl">Consetetur sadipscing
         elitr.</h1>
     </div>
     {/* Section Two */}
     {/* Section Three */}
     <div>  
-      <h2>Lorem ipsum dolor sit amet, consetetur sadipscing elitr.</h2>
-      <div>
-        <h3>Title</h3>
-        <p>Last year performance above SMP</p>
+      <h2 className="font-mono text-4xl">Lorem ipsum dolor sit<br/> amet, consetetur<br/> sadipscing elitr.</h2>
+      <div className='bg-secondary bg-opacity-20 rounded max-w-fit py-10 px-8'>
+        <h3 className='font-mono font-bold text-3xl'>12.9%</h3>
+        <p className='text-lg'>Last year performance<br/>above SMP</p>
       </div>
     </div>
     {/* Section Four */}
