@@ -22,9 +22,13 @@ body {
 }
 
 input {
-     @apply bg-primary border border-secondary rounded p-2 text-secondary font-light
+     @apply bg-primary border border-secondary rounded p-2 text-secondary font-light my-2
+}
+
+form {
+     @apply border-2 border-secondary rounded-md my-5 px-44 py-8 flex flex-col items-center
 }
 
 .button {
-     @apply font-sans rounded-sm text-secondary font-light  p-2 bg-gradient-to-r from-gdYellow via-gdRed to-gdIndigo;
+     @apply font-sans rounded-sm w-24 text-secondary font-light my-2 p-2 bg-gradient-to-r from-gdYellow via-gdRed to-gdIndigo;
 }

@@ -56,7 +56,7 @@ export default function Landing() {
         {/* Section Four */}
         <div>
           <h2 className="font-mono text-4xl font-bold">Contact Us</h2>
-          <div className="border-2 border-secondary rounded-md my-3 p-8 max-w-3xl">
+          <div>
             <form action="" method="post">
               <div className="grid grid-cols-2 gap-4">
                 <input
