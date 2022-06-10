@@ -1,9 +1,8 @@
 //TODO: Font not visible
 
 import React from "react";
-import { FaSearch } from "react-icons/fa";
 
-const Home = () => {
+const Dashboard = () => {
   return (
     <div className="text-primary">
       <div className="min-h-screen">
@@ -22,4 +21,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Dashboard;
