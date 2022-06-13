@@ -1,5 +1,6 @@
 //TODO: Button hover color
 
+import React from "react";
 import Image from "next/image";
 import {
   FaFacebookSquare,
@@ -9,12 +10,28 @@ import {
 } from "react-icons/fa";
 
 import logo from "../public/images/logo.png";
+import fullstop from "../public/images/fullstop.png";
 import Link from "next/link";
+
+const StatCard = ({
+  percentage,
+  description,
+}: {
+  percentage: number;
+  description: string;
+}) => {
+  return (
+    <div className="bg-secondary bg-opacity-20 rounded w-72 py-10 px-8">
+      <h3 className="font-mono font-bold text-3xl">{percentage}%</h3>
+      <p className="text-lg">{description}</p>
+    </div>
+  );
+};
 
 export default function Landing() {
   return (
     <>
-      <div className="bg-primary h-screen flex flex-col justify-between px-16 py-8">
+      <div className="bg-primary flex flex-col justify-between px-16 py-8">
         {/* Navbar */}
         <div className="flex flex-row justify-between items-center">
           <div className="flex flex-row items-center space-x-2">
@@ -33,66 +50,77 @@ export default function Landing() {
           </div>
         </div>
         {/* Section One */}
-        <div className="">
-          <h1 className="font-mono text-5xl">Consetetur sadipscing elitr.</h1>
+        <div className="flex justify-center h-screen items-center">
+          <h1 className="font-mono text-4xl text-center">
+            Consetetur sadipscing <br />
+            elitr
+            <Image src={fullstop} alt="fullstop" height={10} width={10} />
+          </h1>
         </div>
         {/* Section Two */}
         {/* Section Three */}
-        <div>
-          <h2 className="font-mono text-4xl">
-            Lorem ipsum dolor sit
-            <br /> amet, consetetur
-            <br /> sadipscing elitr.
+        <div className="grid grid-cols-3">
+          <h2 className="font-mono text-4xl font-bold col-span-3">
+            Lorem ipsum dolor sit amet,
+            <br />
+            consetetur sadipscing elitr.
           </h2>
-          <div className="bg-secondary bg-opacity-20 rounded max-w-fit py-10 px-8">
-            <h3 className="font-mono font-bold text-3xl">12.9%</h3>
-            <p className="text-lg">
-              Last year performance
-              <br />
-              above SMP
-            </p>
+          <div>{/* Dont touch this div! */}</div>
+          <div className="grid grid-cols-2 gap-4 col-span-2">
+            <StatCard
+              percentage={12.9}
+              description="Last year performance above SMP"
+            />
+            <StatCard
+              percentage={12.9}
+              description="Last year performance above SMP"
+            />
+            <StatCard
+              percentage={12.9}
+              description="Last year performance above SMP"
+            />
+            <StatCard
+              percentage={12.9}
+              description="Last year performance above SMP"
+            />
           </div>
         </div>
         {/* Section Four */}
-        <div>
+        <div className="flex flex-col items-center">
           <h2 className="font-mono text-4xl font-bold">Contact Us</h2>
           <div>
-            <form action="" method="post">
-              <div className="grid grid-cols-2 gap-4">
-                <input
-                  placeholder="First Name"
-                  type="text"
-                  name="first"
-                  id="first"
-                />
-                <input
-                  placeholder="Second Name"
-                  type="text"
-                  name="second"
-                  id="second"
-                />
-                <input
-                  placeholder="Email"
-                  type="email"
-                  name="email"
-                  id="email"
-                />
-                <input placeholder="Phone" type="tel" name="phone" id="phone" />
-                <input
-                  placeholder="Send us a message"
-                  type="text"
-                  name="message"
-                  id="message"
-                />
-              </div>
-              <button type="submit" className="button mt-4 justify-center">
+            <form action="" method="post" className="grid grid-cols-2 gap-4 align-middle">
+              <input
+                placeholder="First Name"
+                type="text"
+                name="first"
+                id="first"
+              />
+              <input
+                placeholder="Second Name"
+                type="text"
+                name="second"
+                id="second"
+              />
+              <input placeholder="Email" type="email" name="email" id="email" />
+              <input placeholder="Phone" type="tel" name="phone" id="phone" />
+              <input
+                placeholder="Send us a message"
+                type="text"
+                name="message"
+                id="message"
+              />
+              <button
+                type="submit"
+                className="button col-span-2 mt-4 justify-center"
+              >
                 Send
               </button>
             </form>
           </div>
         </div>
-        {/* Footer */}
       </div>
+      {/* Footer */}
       <div className="bg-secondary text-primary p-8">
         <div className="flex flex-row justify-between p-4">
           <div>
