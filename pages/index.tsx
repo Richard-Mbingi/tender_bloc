@@ -45,8 +45,10 @@ export default function Landing() {
             <Link href="/">Pricing</Link>
           </div>
           <div className="space-x-3">
-            <Link href="/">Sign in</Link>
-            <button className="button hover:bg-primary">Sign Up</button>
+            <Link href="/sign_in">Sign in</Link>
+            <Link href="/sign_up">
+              <button className="button hover:border-2 hover:border-secondary">Sign Up</button>
+            </Link>
           </div>
         </div>
         {/* Section One */}
@@ -89,7 +91,11 @@ export default function Landing() {
         <div className="flex flex-col items-center">
           <h2 className="font-mono text-4xl font-bold">Contact Us</h2>
           <div>
-            <form action="" method="post" className="grid grid-cols-2 gap-4 align-middle">
+            <form
+              action=""
+              method="post"
+              className="grid grid-cols-2 gap-4 align-middle"
+            >
               <input
                 placeholder="First Name"
                 type="text"
